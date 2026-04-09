@@ -1,8 +1,8 @@
--- =============================================================================
+-- ===
 -- Purpose: Seed 50 realistic users with profiles
 -- Passwords are bcrypt-style placeholder hashes.
 -- Registration dates span 2020–2024 for time-based analytics.
--- =============================================================================
+-- ===
 
 USE twitter_clone;
 
@@ -60,6 +60,9 @@ INSERT INTO users (user_id, username, email, password_hash, is_verified, is_priv
 (48, 'product_thinker', 'sandra.kim@email.com',       '$2b$12$AbyD', 0, 0, 0, '2021-04-15 10:30:00'),
 (49, 'data_viz_pro',    'luis.gomez@email.com',       '$2b$12$AbyE', 0, 0, 0, '2022-09-01 09:00:00'),
 (50, 'open_source',     'hello@opensourcedaily.io',   '$2b$12$AbyF', 0, 0, 0, '2020-10-01 10:00:00');
+
+-- Mark bot accounts
+UPDATE users SET is_bot = 1 WHERE user_id IN (41, 42);
 
 -- ---
 -- user_profiles

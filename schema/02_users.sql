@@ -16,6 +16,7 @@ CREATE TABLE users (
     is_verified    TINYINT(1)      NOT NULL DEFAULT 0,
     is_private     TINYINT(1)      NOT NULL DEFAULT 0,
     is_suspended   TINYINT(1)      NOT NULL DEFAULT 0,
+    is_bot         TINYINT(1)      NOT NULL DEFAULT 0,
     created_at     DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at     DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
