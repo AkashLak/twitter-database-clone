@@ -32,13 +32,5 @@ CREATE TABLE tweets (
 
     CONSTRAINT fk_tweet_quoted
         FOREIGN KEY (quoted_tweet_id) REFERENCES tweets (tweet_id)
-        ON DELETE SET NULL,
-
-    -- Enforce tweet_type consistency: each type has an exact, non-overlapping column state
-    CONSTRAINT chk_tweet_type_consistency
-        CHECK (
-            (tweet_type = 'original' AND parent_tweet_id IS NULL     AND quoted_tweet_id IS NULL    ) OR
-            (tweet_type = 'reply'    AND parent_tweet_id IS NOT NULL  AND quoted_tweet_id IS NULL    ) OR
-            (tweet_type = 'quote'    AND parent_tweet_id IS NULL      AND quoted_tweet_id IS NOT NULL)
-        )
+        ON DELETE SET NULL
 );
