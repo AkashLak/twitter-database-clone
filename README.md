@@ -1,6 +1,6 @@
 # 🐦 Twitter Database Clone
 
-A relational MySQL database modeled after Twitter's core data architecture. Includes a full schema, realistic seed data spanning 2020–2026, and analytics queries covering user behavior, tweet engagement, hashtag trends, and bot detection.
+A relational MySQL database modeled after Twitter's core data architecture. Includes a full schema, realistic seed data spanning 2020-2026, and analytics queries covering user behavior, tweet engagement, hashtag trends, and bot detection.
 
 ## 🚀 Setup
 
@@ -9,7 +9,7 @@ A relational MySQL database modeled after Twitter's core data architecture. Incl
 ./run_all.sh -u <mysql_user> -p
 ```
 
-**Manual execution order — files must run in this sequence:**
+**Manual execution order (files must run in this sequence):**
 ```bash
 # Schema
 mysql -u root -p < schema/01_setup.sql
