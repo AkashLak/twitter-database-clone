@@ -13,7 +13,7 @@ SELECT
     LEFT(t.content, 80) AS content_preview,
     t.tweet_type,
     COUNT(l.like_id) AS like_count,
-    RANK() OVER (ORDER BY COUNT(l.like_id) DESC) AS like_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(l.like_id) DESC) AS like_rank
 FROM tweets t
 JOIN users u ON u.user_id = t.user_id
 JOIN likes l ON l.tweet_id = t.tweet_id
@@ -30,7 +30,7 @@ SELECT
     LEFT(t.content, 80) AS content_preview,
     t.tweet_type,
     COUNT(r.retweet_id) AS retweet_count,
-    RANK() OVER (ORDER BY COUNT(r.retweet_id) DESC) AS retweet_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(r.retweet_id) DESC) AS retweet_rank
 FROM tweets t
 JOIN users u ON u.user_id = t.user_id
 JOIN retweets r ON r.tweet_id = t.tweet_id
@@ -111,7 +111,7 @@ SELECT
     t.tweet_type,
     t.created_at,
     COUNT(r.tweet_id) AS reply_count,
-    RANK() OVER (ORDER BY COUNT(r.tweet_id) DESC) AS reply_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(r.tweet_id) DESC) AS reply_rank
 FROM tweets t
 JOIN users u ON u.user_id = t.user_id
 JOIN tweets r ON r.parent_tweet_id = t.tweet_id AND r.tweet_type = 'reply'

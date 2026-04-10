@@ -11,7 +11,7 @@ SELECT
     h.hashtag_id,
     h.tag,
     COUNT(th.tweet_id) AS usage_count,
-    RANK() OVER (ORDER BY COUNT(th.tweet_id) DESC) AS usage_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(th.tweet_id) DESC) AS usage_rank
 FROM hashtags h
 JOIN tweet_hashtags th ON th.hashtag_id = h.hashtag_id
 GROUP BY h.hashtag_id, h.tag

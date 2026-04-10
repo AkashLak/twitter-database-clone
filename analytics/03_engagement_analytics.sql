@@ -42,7 +42,7 @@ SELECT
     + COALESCE(SUM(rc.retweet_count), 0)
     + COALESCE(SUM(rpc.reply_count), 0)
     + COALESCE(SUM(bc.bookmark_count), 0) AS total_engagement,
-    RANK() OVER (
+    DENSE_RANK() OVER (
         ORDER BY
             COALESCE(SUM(lc.like_count), 0)
           + COALESCE(SUM(rc.retweet_count), 0)
@@ -121,7 +121,7 @@ SELECT
     u.username,
     up.display_name,
     COUNT(m.mention_id) AS times_mentioned,
-    RANK() OVER (ORDER BY COUNT(m.mention_id) DESC) AS mention_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(m.mention_id) DESC) AS mention_rank
 FROM users u
 JOIN user_profiles up ON up.user_id = u.user_id
 JOIN mentions m ON m.mentioned_user_id = u.user_id
