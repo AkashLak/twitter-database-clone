@@ -303,9 +303,7 @@ INSERT INTO tweets (tweet_id, user_id, content, tweet_type, parent_tweet_id, quo
 (157, 29, 'The performance delta here is completely normal for numeric processing workloads. Rust''s zero-cost abstractions shine exactly here. Good data point.', 'quote', NULL, 71, '2024-03-11 09:00:00'),
 (158,  7, 'Error budgets saved my team''s relationship with product. It made reliability a shared problem with shared ownership instead of an ops team problem.', 'quote', NULL, 87, '2024-03-03 10:00:00'),
 (159, 46, 'K8s resource limits story: we had a cluster where a single noisy neighbor was causing latency spikes. Proper limits set → problem gone. YAML is worth it.', 'quote', NULL, 107, '2024-03-26 11:00:00'),
-(160, 13, 'The "why behind the what" framing is the best way I have heard it described. I survey users monthly. The analytics tell me where to look, users tell me what to fix.', 'quote', NULL, 110, '2024-01-19 11:00:00');
-
-INSERT INTO tweets (tweet_id, user_id, content, tweet_type, parent_tweet_id, quoted_tweet_id, created_at) VALUES
+(160, 13, 'The "why behind the what" framing is the best way I have heard it described. I survey users monthly. The analytics tell me where to look, users tell me what to fix.', 'quote', NULL, 110, '2024-01-19 11:00:00'),
 (161,  1, 'Six months into using Neovim full time. The learning curve was real but I am not going back. Config-as-code for your editor is underrated. #programming', 'original', NULL, NULL, '2025-02-10 10:00:00'),
 (162,  1, 'Spent today refactoring a service from callbacks to async/await. The diff was 600 lines shorter. Readability is a feature.', 'original', NULL, NULL, '2025-10-20 14:30:00'),
 (163,  2, 'Hot take: most "data quality" problems are actually data modeling problems. Fix the schema, not the pipeline. #databases #sql', 'original', NULL, NULL, '2025-01-20 09:30:00'),
