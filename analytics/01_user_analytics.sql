@@ -58,7 +58,7 @@ SELECT
     SUM(t.tweet_type = 'original') AS originals,
     SUM(t.tweet_type = 'reply') AS replies,
     SUM(t.tweet_type = 'quote') AS quotes,
-    RANK() OVER (ORDER BY COUNT(t.tweet_id) DESC) AS tweet_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(t.tweet_id) DESC) AS tweet_rank
 FROM users u
 JOIN user_profiles up ON up.user_id = u.user_id
 JOIN tweets t ON t.user_id = u.user_id
@@ -75,7 +75,7 @@ SELECT
     up.display_name,
     u.is_verified,
     COUNT(f.follower_id) AS follower_count,
-    RANK() OVER (ORDER BY COUNT(f.follower_id) DESC) AS follower_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(f.follower_id) DESC) AS follower_rank
 FROM users u
 JOIN user_profiles up ON up.user_id = u.user_id
 LEFT JOIN follows f ON f.following_id = u.user_id
@@ -92,7 +92,7 @@ SELECT
     u.username,
     up.display_name,
     COUNT(f.following_id) AS following_count,
-    RANK() OVER (ORDER BY COUNT(f.following_id) DESC) AS following_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(f.following_id) DESC) AS following_rank
 FROM users u
 JOIN user_profiles up ON up.user_id = u.user_id
 LEFT JOIN follows f ON f.follower_id = u.user_id
@@ -187,7 +187,7 @@ SELECT
     u.username,
     up.display_name,
     COUNT(b.bookmark_id) AS bookmark_count,
-    RANK() OVER (ORDER BY COUNT(b.bookmark_id) DESC) AS bookmark_rank
+    DENSE_RANK() OVER (ORDER BY COUNT(b.bookmark_id) DESC) AS bookmark_rank
 FROM users u
 JOIN user_profiles up ON up.user_id = u.user_id
 JOIN bookmarks b ON b.user_id = u.user_id
