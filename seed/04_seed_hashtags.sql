@@ -10,38 +10,38 @@ USE twitter_clone;
 -- hashtags - 32 unique tags
 -- ---
 INSERT INTO hashtags (hashtag_id, tag, created_at) VALUES
-( 1, 'programming',     '2024-01-01 00:00:00'),
-( 2, 'rustlang',        '2024-01-01 00:00:00'),
-( 3, 'sql',             '2024-01-01 00:00:00'),
-( 4, 'databases',       '2024-01-01 00:00:00'),
-( 5, 'ai',              '2024-01-01 00:00:00'),
-( 6, 'ml',              '2024-01-01 00:00:00'),
-( 7, 'machinelearning', '2024-01-01 00:00:00'),
-( 8, 'crypto',          '2024-01-01 00:00:00'),
-( 9, 'bitcoin',         '2024-01-01 00:00:00'),
-(10, 'web3',            '2024-01-01 00:00:00'),
-(11, 'nft',             '2024-01-01 00:00:00'),
-(12, 'devops',          '2024-01-01 00:00:00'),
-(13, 'k8s',             '2024-01-01 00:00:00'),
-(14, 'kubernetes',      '2024-01-01 00:00:00'),
-(15, 'security',        '2024-01-01 00:00:00'),
-(16, 'infosec',         '2024-01-01 00:00:00'),
-(17, 'cybersecurity',   '2024-01-01 00:00:00'),
-(18, 'dataengineering', '2024-01-01 00:00:00'),
-(19, 'opensource',      '2024-01-01 00:00:00'),
-(20, 'startup',         '2024-01-01 00:00:00'),
-(21, 'entrepreneurship','2024-01-01 00:00:00'),
-(22, 'climate',         '2024-01-01 00:00:00'),
-(23, 'fitness',         '2024-01-01 00:00:00'),
-(24, 'health',          '2024-01-01 00:00:00'),
-(25, 'python',          '2024-01-01 00:00:00'),
-(26, 'llm',             '2024-01-01 00:00:00'),
-(27, 'gitops',          '2024-01-01 00:00:00'),
-(28, 'dbt',             '2024-01-01 00:00:00'),
-(29, 'sqlite',          '2024-01-01 00:00:00'),
-(30, 'mlops',           '2024-01-01 00:00:00'),
-(31, 'cloud',           '2024-01-01 00:00:00'),
-(32, 'aws',             '2024-01-01 00:00:00');
+( 1, 'programming',     '2024-01-02 10:00:00'),  -- first used in tweet 99
+( 2, 'rustlang',        '2024-01-15 09:00:00'),  -- first used in tweet 1
+( 3, 'sql',             '2024-01-17 09:00:00'),  -- first used in tweet 90
+( 4, 'databases',       '2024-01-17 09:00:00'),  -- first used in tweet 90
+( 5, 'ai',              '2024-01-02 08:00:00'),  -- first used in tweet 97
+( 6, 'ml',              '2024-01-18 10:30:00'),  -- first used in tweet 24
+( 7, 'machinelearning', '2024-01-17 14:00:00'),  -- first used in tweet 149
+( 8, 'crypto',          '2024-01-02 09:00:00'),  -- first used in tweet 98
+( 9, 'bitcoin',         '2024-01-02 09:00:00'),  -- first used in tweet 98
+(10, 'web3',            '2024-01-25 17:00:00'),  -- first used in tweet 54
+(11, 'nft',             '2024-02-20 20:30:00'),  -- first used in tweet 10
+(12, 'devops',          '2024-01-10 08:30:00'),  -- first used in tweet 21
+(13, 'k8s',             '2024-01-10 08:30:00'),  -- first used in tweet 21
+(14, 'kubernetes',      '2024-01-22 09:00:00'),  -- implied via k8s tweets
+(15, 'security',        '2024-01-14 10:00:00'),  -- first used in tweet 104
+(16, 'infosec',         '2024-03-28 11:00:00'),  -- first used in tweet 63
+(17, 'cybersecurity',   '2024-01-12 09:00:00'),  -- first used in tweet 62
+(18, 'dataengineering', '2024-02-28 13:00:00'),  -- first used in tweet 38
+(19, 'opensource',      '2024-01-26 10:00:00'),  -- first used in tweet 114
+(20, 'startup',         '2024-01-05 09:00:00'),  -- first used in tweet 30
+(21, 'entrepreneurship','2024-02-08 10:00:00'),  -- first used in tweet 64
+(22, 'climate',         '2024-01-13 11:00:00'),  -- first used in tweet 68
+(23, 'fitness',         '2024-01-07 07:00:00'),  -- first used in tweet 42
+(24, 'health',          '2024-01-07 07:00:00'),  -- first used in tweet 42
+(25, 'python',          '2024-02-14 13:45:00'),  -- first used in tweet 6
+(26, 'llm',             '2024-02-16 10:00:00'),  -- first used in tweet 76
+(27, 'gitops',          '2024-01-22 09:00:00'),  -- first used in tweet 106
+(28, 'dbt',             '2024-02-28 13:00:00'),  -- first used in tweet 38
+(29, 'sqlite',          '2024-01-26 10:00:00'),  -- first used in tweet 114
+(30, 'mlops',           '2024-01-23 09:00:00'),  -- first used in tweet 48
+(31, 'cloud',           '2024-01-24 09:30:00'),  -- first used in tweet 74
+(32, 'aws',             '2024-01-24 09:30:00');  -- first used in tweet 74
 
 -- ---
 -- tweet_hashtags - associations between tweets and hashtags
